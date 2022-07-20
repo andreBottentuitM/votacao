@@ -16,18 +16,18 @@ function votacao() {
     let branco = 0
 
     //Nesse caso serão 10 eleitores!
-    for (i = 0; i < 9; i++) {
+    for (i = 0; i < 10; i++) {
         let voto = prompt("Digite o seu voto:")
         let simOuNao = prompt("Gostaria de finalizar sua votação? (sim ou nao)")
-        if ((simOuNao == "sim") && (parseInt(voto) >= 0) && (parseInt(voto) == candidatos.CANDIDATO_X)) {
+        if ((simOuNao == "sim") &&  (parseInt(voto) == candidatos.CANDIDATO_X)) {
             contVotoX = contVotoX + 1
-        } else if ((simOuNao == "sim") && (parseInt(voto) >= 0) && (parseInt(voto) == candidatos.CANDIDATO_Y)) {
+        } else if ((simOuNao == "sim") && (parseInt(voto) == candidatos.CANDIDATO_Y)) {
             contVotoY = contVotoY + 1
-        } else if ((simOuNao == "sim") && (parseInt(voto) >= 0) && (parseInt(voto) == candidatos.CANDIDATO_Z)) {
+        } else if ((simOuNao == "sim") && (parseInt(voto) == candidatos.CANDIDATO_Z)) {
             contVotoZ = contVotoZ + 1
-        } else if ((simOuNao == "sim") && (parseInt(voto) >= 0) && (parseInt(voto) == candidatos.BRANCO)) {
+        } else if ((simOuNao == "sim") &&  (parseInt(voto) == candidatos.BRANCO)) {
             branco = branco + 1
-        } else if ((simOuNao == "sim") && (parseInt(voto) >= 0) && (parseInt(voto) != candidatos.BRANCO) && (parseInt(voto) != candidatos.CANDIDATO_X) && (parseInt(voto) != candidatos.CANDIDATO_Y) && (parseInt(voto) != candidatos.CANDIDATO_Z)) {
+        } else if ((simOuNao == "sim") &&  (parseInt(voto) != candidatos.BRANCO) && (parseInt(voto) != candidatos.CANDIDATO_X) && (parseInt(voto) != candidatos.CANDIDATO_Y) && (parseInt(voto) != candidatos.CANDIDATO_Z)) {
             nulos = nulos + 1
         } else if ((simOuNao == "nao") || (!isNaN(parseInt(voto) && isFinite(voto)) <= 0)) {
             i = i - 1
